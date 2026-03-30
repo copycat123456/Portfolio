@@ -3,54 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Pijke van Leeuwen</title>
+    <title>Portfolio | Pijke van Leeuwen</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
             color: #333;
         }
+
         header {
-            background-color: #222;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 60px 20px;
         }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
         nav {
-            background-color: #444;
-            padding: 10px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #4facfe;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
             text-align: center;
         }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+
+        .about, .contact {
+            text-align: center;
         }
-        nav a:hover {
-            text-decoration: underline;
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-        section {
-            padding: 40px;
-            max-width: 800px;
-            margin: auto;
-        }
+
         .card {
             background: white;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
         }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
         footer {
-            background-color: #222;
-            color: white;
             text-align: center;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
@@ -58,7 +103,7 @@
 
 <header>
     <h1>Pijke van Leeuwen</h1>
-    <p>Mijn Portfolio</p>
+    <p>O&O Portfolio</p>
 </header>
 
 <nav>
@@ -67,30 +112,38 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="over">
-    <div class="card">
-        <h2>Over mij</h2>
-        <p>Hallo! Ik ben Pijke van Leeuwen. Dit is mijn portfolio website waar ik mijn projecten laat zien.</p>
-    </div>
+<section id="over" class="about">
+    <h2>Over mij</h2>
+    <p>
+        Hallo! Ik ben Pijke van Leeuwen en ik zit in de brugklas.  
+        Dit is mijn portfolio voor het vak O&O (Onderzoek & Ontwerpen).
+    </p>
 </section>
 
 <section id="projecten">
-    <div class="card">
-        <h2>Projecten</h2>
-        <p>Hier komen jouw projecten te staan.</p>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
+    <h2>Mijn Projecten</h2>
+
+    <div class="projects">
+        <div class="card">
+            <h3>Project 1</h3>
+            <p>Korte beschrijving van je project.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project 2</h3>
+            <p>Korte beschrijving van je project.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project 3</h3>
+            <p>Korte beschrijving van je project.</p>
+        </div>
     </div>
 </section>
 
-<section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:156161@edu.ja.nl">156161@edu.ja.nl</a></p>
-    </div>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:156161@edu.ja.nl">156161@edu.ja.nl</a></p>
 </section>
 
 <footer>
